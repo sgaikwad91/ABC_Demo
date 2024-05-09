@@ -13,16 +13,23 @@ public class FactorialCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
-        int num = scanner.nextInt();
 
-        if (num < 0) {
-            System.out.println("Factorial is not defined for negative numbers.");
+        // Check if input is available
+        if (scanner.hasNextInt()) {
+            int num = scanner.nextInt();
+
+            if (num < 0) {
+                System.out.println("Factorial is not defined for negative numbers.");
+            } else {
+                int result = factorial(num);
+                System.out.println("Factorial of " + num + " is " + result);
+            }
         } else {
-            int result = factorial(num);
-            System.out.println("Factorial of " + num + " is " + result);
+            System.out.println("Invalid input. Please enter a valid integer.");
         }
 
         scanner.close();
     }
 }
+
 

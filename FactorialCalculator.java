@@ -9,7 +9,7 @@ public class FactorialCalculator {
     }
 
     public static void main(String[] args) {
-        int num = 7; // Calculate factorial of 7
+        int num = 5; // Calculate factorial of 5
 
         if (num < 0) {
             System.out.println("Factorial is not defined for negative numbers.");
